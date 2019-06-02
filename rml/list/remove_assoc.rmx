@@ -1,0 +1,11 @@
+// val remove_assoc : 'a -> ('a * 'b) list -> ('a * 'b) list
+
+/* [remove_assoc k l] is the result of removing every pair [(a,b)] in [l] such
+ * that [a = k]. Order is preserved. */
+let rec remove_assoc k l = 
+  match l with 
+  |[] -> []
+  |(key, value)::t -> if k = key then remove_assoc k t else (key, value)::(remove_assoc k t)
+  end 
+  // TODO: Implement me!
+in

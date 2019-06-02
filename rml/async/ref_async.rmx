@@ -1,0 +1,7 @@
+// val ref_async : 'a -> hand
+
+/* [ref_async v] spawns a new instance of [loc] with the arguments [v] and [SELF]
+ * and returns the resulting handle. */
+let ref_async v = SELF
+//TODO: Implment me!
+in

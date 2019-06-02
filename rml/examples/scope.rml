@@ -1,0 +1,6 @@
+let foo =
+  let bar = 2 in
+  2
+in
+let bar = 5 in
+println bar

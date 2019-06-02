@@ -1,0 +1,11 @@
+// val rev : 'a list -> 'a list
+include "append.rmx"
+
+/* [rev l] is [vn; ... ; v1; v0] where [l] is [v0; v1; ... ; vn] */
+let rec rev l = 
+  match l with 
+  |[] -> []
+  |h::t -> append (rev t) [h]
+  end 
+  // TODO Implement me!
+in

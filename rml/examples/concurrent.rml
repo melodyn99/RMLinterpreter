@@ -1,0 +1,16 @@
+let rec robot = fun ttl ->
+  if ttl = 0 then
+    return ()
+  else begin
+    await _ = send ("echo", ttl) to SERVER in
+    await response = recv SERVER in
+    println response;
+    await _ = sleep 100 in
+    robot (ttl - 1)
+  end
+in
+let _ = spawn robot with 100 in
+let _ = spawn robot with 100 in
+let _ = spawn robot with 100 in
+let _ = spawn robot with 100 in
+robot 100

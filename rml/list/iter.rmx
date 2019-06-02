@@ -1,0 +1,11 @@
+// val iter : ('a -> unit) -> 'a list -> unit
+
+/* [iter f l] applies [f] to every element of [l] in order, discarding each result
+ * and returning a unit. */
+let rec iter f l = 
+  match l with 
+  |[] -> ()
+  |h::t -> f h; iter f t 
+  end 
+  // TODO: Implement me!
+in

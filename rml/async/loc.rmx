@@ -1,0 +1,10 @@
+//val loc : 'a -> hand -> 'b prom
+
+/* [loc v h] should receive from [h]. If [h] is requesting a dereference, [loc v h]
+ * sends [v] to [h] and makes a recursive call to itself. If [h] is requesting
+ * an assign, [loc v h] makes a recursive call, supplying itself with the new value
+ * and [h]. The details of how [loc] distinguishes assign requests from dereference
+ * requests is left to you. */
+ let rec loc v h = loc v h
+ //TODO: Implement me!
+ in

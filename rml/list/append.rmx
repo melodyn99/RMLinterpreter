@@ -1,0 +1,11 @@
+// val append : 'a list -> 'a list -> 'a list
+
+/* [append l l'] is [v0; v1; ... ; vn; v0'; v1'; ... ; vn'] where [l] is
+ * [v0; v1; ... ; vn] and [l'] is [v0'; v1'; ... ; vn']. */
+let rec append l l' = 
+  match l with 
+  |[] -> l'
+  |h::t -> h::(append t l')
+  end
+  // TODO: Implement me!
+in

@@ -1,0 +1,8 @@
+// val assign_async : hand -> 'a -> unit
+
+/* [assign_async h v] sends a message to [h] requesting that the value be updated
+ * to [v].
+ * Precondition: [h] is the handle of a [loc] instance. */
+let assign_async h v = ()
+// TODO: Implement me!
+in

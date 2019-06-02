@@ -1,0 +1,12 @@
+// val send_back : ('a -> 'b) -> 'a -> 'b promise
+
+/* [send_back f a] is a non-blocking function that returns a promise for the
+ * value of [f a].
+ * 
+ * This method should spawn a robot to invoke [f] with [a] and then send back 
+ * the results. This method is non-blocking, meaning it should immediately 
+ * return a promise (which will eventually resolve to the result of 
+ * [f] applied to [a]). */
+let send_back f a = return (f a)
+// TODO: Implment me!
+in

@@ -1,0 +1,2 @@
+ignore(print "side effect happens"; let x = 4 in x + 5);
+0

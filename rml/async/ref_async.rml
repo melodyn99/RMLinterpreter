@@ -1,0 +1,12 @@
+include "loc.rmx"
+include "ref_async.rmx"
+include "deref_async.rmx"
+include "assign_async.rmx"
+
+/* Your implementation of the above four files should be such that this code
+ * outputs [1] */
+
+let r = ref_async 0 in
+assign_async r 1;
+ignore (await x = deref_async r 0 in println x; return ());
+sleep 3000

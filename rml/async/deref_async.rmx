@@ -1,0 +1,10 @@
+// val deref_async : hand -> 'a -> 'a prom
+
+/* [deref_async h d] sends a message to [h] requesting the value stored by [h].
+ * [d] is necessary for the purpose of type checking and should
+ * be sent to [h]. Your implementation of [loc] should be such that it sees that the
+ * message requests a dereference and ignores [d].
+ * Precondition: [h] is the handle of a [loc] instance */
+let deref_async h d = return d
+// TODO: Implement me!
+in

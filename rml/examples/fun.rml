@@ -1,0 +1,2 @@
+let add = fun a -> fun b -> a + b in
+println (add 1 2)

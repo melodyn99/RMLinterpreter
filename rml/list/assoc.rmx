@@ -1,0 +1,12 @@
+/* val assoc : 'a -> 'b -> ('a * 'b) list -> (bool * 'b) */
+
+/* [assoc k d l] is [(b,v)] where [b] is [true] if [k] is bound in the association
+ * list [l] and [false] otherwise. If [b] is [true] then [v] is the value bound
+ * to the first occurrence of [k] in [l], else [v] is [d]. */
+let rec assoc k d l = 
+  match l with 
+  |[] -> (false, d)
+  |(key, value)::t -> if k = key then (true, value) else assoc k d t
+  end
+  // TODO: Implement me!
+in

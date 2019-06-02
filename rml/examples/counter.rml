@@ -1,0 +1,11 @@
+let rec counter = fun count ->
+  await _ = send ("echo", count) to SERVER in
+  await response = recv SERVER in
+  println response;
+  await _ = sleep 100 in
+  if count < 100 then
+    counter (response + 1)
+  else
+    counter 0
+in
+counter 0

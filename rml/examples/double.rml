@@ -1,0 +1,7 @@
+let double f x =
+  f (f x)
+in
+let add = fun a -> fun b ->
+  a + b
+in
+println ((double (add 5)) 10)

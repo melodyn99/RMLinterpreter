@@ -1,0 +1,10 @@
+// val mem : 'a -> 'a list -> bool
+
+/* [mem v l] is [true] if [v] is in [l] and [false] otherwise. */
+let rec mem v l = 
+  match l with 
+  |[] -> false
+  |h::t -> if h = v then true
+  end 
+  // TODO: Implement me!
+in

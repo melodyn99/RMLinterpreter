@@ -1,0 +1,11 @@
+// val fold_left : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+
+/* [fold_left f a l] is [f ( ... (f (f a v0) v1) ... ) vn],
+ * where [l] is [v0; v1; ... ; vn]. */
+let rec fold_left f a l = 
+  match l with 
+  |[] -> a 
+  |h::t -> fold_left f (f a h) t 
+  end 
+  // TODO: Implement me!
+in

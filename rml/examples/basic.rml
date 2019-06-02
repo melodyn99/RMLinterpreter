@@ -1,0 +1,4 @@
+let main =
+  fun x -> println (1 + 2 + 3 + x)
+in
+main 1

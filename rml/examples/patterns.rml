@@ -1,0 +1,5 @@
+let _ = println 0 in
+let x = 1 in
+let (y, z) = (x, x) in
+println y;
+println z

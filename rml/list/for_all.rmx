@@ -1,0 +1,11 @@
+// val for_all : ('a -> bool) -> 'a list -> bool
+
+/* [for_all p l] is [true] if [p v] is [true] for every member [v] of [l], and
+ * [false] otherwise. */
+let rec for_all p l = 
+  match l with 
+  |[] -> true
+  |h::t -> if p h then for_all p t else false
+  end
+  // TODO: Implement me!
+in

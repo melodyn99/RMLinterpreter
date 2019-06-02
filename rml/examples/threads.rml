@@ -1,0 +1,9 @@
+let a =
+  await _ = sleep 1000 in
+  return (println 0)
+in
+let b =
+  await _ = sleep 2000 in
+  return (println 1)
+in
+join (a::b::[])

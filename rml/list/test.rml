@@ -1,0 +1,79 @@
+include "append.rmx"
+include "assoc.rmx"
+include "exists.rmx"
+include "filter.rmx"
+include "fold_left.rmx"
+include "fold_right.rmx"
+include "for_all.rmx"
+include "iter.rmx"
+include "length.rmx"
+include "remove_assoc.rmx"
+include "mem.rmx"
+include "map.rmx"
+include "rev.rmx"
+
+let count = ref 0 in
+
+//Tests for append
+// let () = println (match append [1] [] with | [] -> true | _ -> false end) in
+// count := ((!count) + 1);
+
+// // Tests for assoc
+// let () = println (match assoc 0 0 [] with | (false, 0) -> true | _ -> false end) in
+// count := !count + 1;
+
+// Tests for exists
+// let () = println (not (exists (fun x -> x) [])) in
+// count := !count + 1;
+// let () = println (not (exists (fun x -> x > 5) [1])) in 
+// count := !count + 1;
+
+// // Tests for filter
+// let () = println (match filter (fun x -> x) [] with | [] -> true | _ -> false end) in
+// count := !count + 1;
+
+// // Tests for fold_left
+// let () = println (fold_left (fun a -> fun b -> a) true []) in
+// count := !count + 1;
+
+// // Tests for fold_right
+// let () = println (fold_right (fun a -> fun b -> a) [] true) in
+// count := !count +1;
+
+// // Tests for for_all
+// let () = println (not (for_all (fun x -> x) [])) in
+// count := !count +1;
+
+// // Tests for iter
+// let () = println (match iter (fun x -> ()) [] with | () -> true | _ -> false end) in
+// count := !count +1;
+
+// Tests for length
+let () = println (length [] = 0) in
+count := !count +1;
+let () = println (length [1;2;3] = 3) in 
+count := !count +1;
+let () = println (length [5;4;1;2;6;7;8] = 7) in 
+count := !count +1;
+
+// // Tests for remove_assoc
+// let () = println (match remove_assoc 0 [] with | [] -> true | _ -> false end) in
+// count := !count +1;
+
+// // Tests for mem
+// let () = println (not (mem 0 [])) in
+// count := !count +1;
+
+// // Tests for map
+// let () = println (match map (fun x -> x) [] with | [] -> true | _ -> false end) in
+// count := !count +1;
+
+// // Tests for rev
+// let () = println (match rev [] with | [] -> true | _ -> false end) in
+// count := !count +1;
+
+// Tests for send_back
+// let () = await () = send_back (fun () -> ()) () in println true in
+// count := !count +1;
+
+print (!count); println " tests ran!"

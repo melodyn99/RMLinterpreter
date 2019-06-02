@@ -1,0 +1,2 @@
+await z = (await y = sleep 1000 in (await x = sleep 1000 in return 32))
+in return (println (z+10))

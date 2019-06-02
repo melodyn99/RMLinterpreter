@@ -1,0 +1,11 @@
+// val exists : ('a -> bool) -> 'a list -> bool
+
+/* [exists p l] is [true] if there is some [v] in [l] such that [p v] is [true],
+ * and [false] otherwise. */
+let rec exists p l = 
+  match l with 
+  |[] -> false
+  |h::t -> if p h then true else exists p t
+  end 
+  // TODO: Implement me!
+in

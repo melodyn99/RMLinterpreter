@@ -1,0 +1,7 @@
+println 0;
+let a = sleep 1000 in
+let b = sleep 2000 in
+let c = sleep 3000 in
+println 1;
+await _ = pick [a; b; c] in
+return (println 2)

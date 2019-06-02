@@ -1,0 +1,10 @@
+// val length : 'a list -> int
+
+/* [length l] is the number of elements in [l] */
+let rec length l =
+  match l with 
+  |[] -> 0
+  |h::t -> 1 + length t
+  end
+  // TODO: Implement me!
+in

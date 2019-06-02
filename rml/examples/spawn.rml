@@ -1,0 +1,15 @@
+let robot = fun id ->
+  await _ = sleep (id * 1000) in
+  return (println id)
+in
+println 10;
+let _ = spawn robot with 0 in
+println 20;
+let _ = spawn robot with 1 in
+println 30;
+let _ = spawn robot with 2 in
+println 40;
+let _ = spawn robot with 3 in
+println 50;
+
+sleep 5000
